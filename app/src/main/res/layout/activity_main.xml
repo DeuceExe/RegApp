@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="128dp"
+        android:contentDescription="@string/avatar"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        android:src="@drawable/avatar"  />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btUp"
+        app:layout_constraintEnd_toEndOf="@id/imAvatar"
+        app:layout_constraintStart_toStartOf="@id/imAvatar"
+        app:layout_constraintTop_toBottomOf="@id/imAvatar"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSignUp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toTopOf="@id/btIn"
+        app:layout_constraintEnd_toEndOf="@id/tvInfo"
+        app:layout_constraintStart_toStartOf="@id/tvInfo"
+        app:layout_constraintTop_toBottomOf="@id/tvInfo"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/btIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSignIn"
+        android:text="@string/sign_in"
+        app:layout_constraintEnd_toEndOf="@id/btUp"
+        app:layout_constraintStart_toStartOf="@id/btUp"
+        app:layout_constraintTop_toBottomOf="@id/btUp"
+        tools:ignore="UsingOnClickInXml" />
+</androidx.constraintlayout.widget.ConstraintLayout>
